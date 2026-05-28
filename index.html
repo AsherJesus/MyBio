@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Asher.exe Y2K Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="os">
+    <header class="topbar">
+      <div class="brand">
+        <span class="spark">✦</span>
+        ASHER.EXE
+      </div>
+
+      <div class="now-playing">
+        <img class="cover" src="./img/lightbrown.jpg" alt="cover" />
+
+        <div class="track-text">
+          <strong>now playing:</strong><br />
+          <span id="topSongTitle">lost in the jungle</span>
+        </div>
+
+        <div class="bars"></div>
+
+        <span class="time-text" id="topMusicTime">0:00 / 2:36</span>
+
+        <div class="controls">
+          <button onclick="changeTrack()">◀</button>
+          <button onclick="toggleMusic()" id="musicBtn">▶</button>
+          <button onclick="changeTrack()">▶</button>
+        </div>
+      </div>
+
+      <div class="win-controls">
+        <span>–</span>
+        <span>□</span>
+        <span>×</span>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="side-card">
+          <img src="./img/brownpen.jpg" alt="Y2K pattern" />
+          <h2>ASHER.EXE</h2>
+          <p>Y2K INTERACTIVE PORTFOLIO</p>
+        </div>
+
+        <nav class="nav">
+          <button onclick="scrollToSection('home')">⌂ HOME</button>
+          <button onclick="scrollToSection('story')">♟ ABOUT</button>
+          <button onclick="scrollToSection('story')">▣ MY STORY</button>
+          <button onclick="scrollToSection('projects')">▰ PROJECTS</button>
+          <button onclick="scrollToSection('visuals')">✦ VISUALS</button>
+          <button onclick="openDream()">☾ DREAM LOG</button>
+          <button onclick="scrollToSection('playground')">🎮 PLAYGROUND</button>
+          <button>✉ CONTACT</button>
+        </nav>
+
+        <div class="status">
+          <strong>SYSTEM STATUS</strong>
+
+          <div class="status-screen">
+            FOCUSED<br />
+            CREATING<br />
+            WINNING
+          </div>
+
+          <div class="meter"></div>
+        </div>
+
+        <div class="connect">
+          <strong>CONNECT</strong>
+
+          <div class="connect-icons">
+            <span>◎</span>
+            <span>◈</span>
+            <span>◌</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main" id="home">
+        <section class="hero">
+          <div class="hero-content">
+            <h1>ASHER KIRKLAND</h1>
+
+            <div class="sub">
+              DREAM. CREATE. INSPIRE.
+            </div>
+
+            <div class="japanese">
+              꿈은 현실이 된다 ✧
+            </div>
+          </div>
+        </section>
+
+        <section class="windows-grid">
+          <div class="window">
+            <div class="head">
+              <span>welcome.txt</span>
+
+              <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="welcome">
+              <h2>
+                WELCOME TO<br />
+                MY WORLD.
+              </h2>
+
+              <p>
+                Step into a nostalgic digital universe where code meets
+                creativity and dreams take shape in pixels.
+              </p>
+
+              <button onclick="openDream()">explore →</button>
+            </div>
+          </div>
+
+          <div class="window" id="story">
+            <div class="head">
+              <span>my_story.txt</span>
+
+              <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="story">
+              <h2>FROM STRUGGLE TO CODE.</h2>
+
+              <p>
+                I started coding when I was 21 years old. At first, it was hard
+                staying locked in. There were days I felt unsure, days I wanted
+                to quit, and days where the dream felt bigger than where I was
+                standing.
+              </p>
+
+              <p>
+                Now I am 24, still growing, still learning, and finally enjoying
+                the dream of creating art through code.
+              </p>
+
+              <p>
+                My work is inspired by old-school retro games, ambient rooms,
+                Windows.exe aesthetics, VHS visuals, and the Y2K world I was
+                born into in 2001.
+              </p>
+
+              <p>
+                I'm trapped in the nostalgic things — and I turn that nostalgia
+                into art. This is my life. This is my dream.
+              </p>
+            </div>
+          </div>
+
+          <div class="window currently" id="projects">
+            <div class="head">
+              <span>currently.exe</span>
+
+              <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <img src="img/mylogo.jpeg" alt="current project" />
+
+            <div class="list">
+              <div>🌐 Building dreams in real time...</div>
+              <div>▣ Coding new worlds</div>
+              <div>♫ Listening to ambient</div>
+              <div>🎮 Playing retro games</div>
+              <div>✦ Creating Y2K art</div>
+            </div>
+          </div>
+
+          <div class="bottom-grid">
+            <div class="window" id="playground">
+              <div class="head">
+                <span>ambient.mp3</span>
+
+                <div class="dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="music-panel">
+                <div class="music-content">
+                  <div class="music-info">
+                    <h2 id="songTitle">lost in the jungle</h2>
+                    <p id="musicTime">0:00 / 2:36</p>
+                  </div>
+                </div>
+
+                <div class="music-buttons">
+                  <button onclick="changeTrack()">◀</button>
+
+                  <button onclick="toggleMusic()" id="musicBtn2">
+                    ▶
+                  </button>
+
+                  <button onclick="changeTrack()">▶</button>
+
+                  <span>🔊 ━━━━━━━</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="window" id="visuals">
+              <div class="head">
+                <span>dream_world.feed</span>
+
+                <div class="dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="feed">
+                <div class="feed-row">
+                  <img src="./img/browndisk.webp" alt="visual one" />
+                  <img src="./img/brownnote.webp" alt="visual two" />
+                  <img src="./img/browntrust.png" alt="visual three" />
+                </div>
+
+                <div class="caption">
+                  a world of endless possibilities.
+                </div>
+              </div>
+            </div>
+
+            <div class="window">
+              <div class="head">
+                <span>notes.log</span>
+
+                <div class="dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="notes">
+                <p>
+                  the goal isn't to fit in.<br />
+                  the goal is to build<br />
+                  my own world.<br /><br />
+                  ✦ ✧ ✦
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="taskbar">
+      <button class="start">⊞ start</button>
+
+      <div class="task-item">▰ dreams</div>
+      <div class="task-item">▰ projects</div>
+      <div class="task-item">✦ visuals</div>
+      <div class="task-item">🎮 playground</div>
+
+      <div class="clock">
+        13:37<br />
+        5/24/2024
+      </div>
+    </footer>
+  </div>
+
+  <div id="dreamModal" class="dream-modal">
+    <div class="window modal-window">
+      <div class="head">
+        <span>dream_file.exe</span>
+        <button onclick="closeDream()">×</button>
+      </div>
+
+      <div class="story">
+        <h2>THIS IS MY DREAM FILE.</h2>
+
+        <p>
+          This portfolio is not just a website. It is a piece of my life.
+          I started with confusion, kept going through doubt, and now I am
+          creating my own world through code.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <audio id="ambientAudio" loop>
+    <source
+      src="./audio/Soichi Terada - Grand Senshuraku - Sumo Jungle Far East Recording-[AudioTrimmer.com].mp3"
+      type="audio/mpeg"
+    />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
